@@ -60,5 +60,45 @@ namespace FinalMVC.Views
         {
 
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            //validate input form 
+
+            if (string.IsNullOrEmpty(txt_ma.Text))
+            {
+                MessageBox.Show("Vui long dien vao ma");
+                txt_ma.Focus();
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txt_ten.Text))
+                {
+                    MessageBox.Show("Vui long dien vao ten");
+                    txt_ten.Focus();
+                }
+                else
+                {
+                    // du ma va ten roi
+
+
+                    var isSuccess = controller.Add(txt_ma.Text, txt_ten.Text, txt_nd.Text, txt_mota.Text);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("them moi thanh cong");
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = controller.GetAll();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Them that bai");
+
+                    }
+                }
+
+            }
+        }
     }
 }
