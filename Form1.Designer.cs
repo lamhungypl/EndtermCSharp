@@ -36,6 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.đăngXuâtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,8 @@
             // quảnLýDữLiệuToolStripMenuItem
             // 
             this.quảnLýDữLiệuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.table01ToolStripMenuItem});
+            this.table01ToolStripMenuItem,
+            this.formTestToolStripMenuItem});
             this.quảnLýDữLiệuToolStripMenuItem.Name = "quảnLýDữLiệuToolStripMenuItem";
             this.quảnLýDữLiệuToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.quảnLýDữLiệuToolStripMenuItem.Text = "Quản lý dữ liệu";
@@ -105,6 +107,13 @@
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // formTestToolStripMenuItem
+            // 
+            this.formTestToolStripMenuItem.Name = "formTestToolStripMenuItem";
+            this.formTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formTestToolStripMenuItem.Text = "form_Test";
+            this.formTestToolStripMenuItem.Click += new System.EventHandler(this.formTestToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +142,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem đăngXuâtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formTestToolStripMenuItem;
     }
 }
 

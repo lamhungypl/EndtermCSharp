@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalMVC.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,10 +26,7 @@ namespace FinalMVC
         private void table01ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Views.QL_tbl01_frm frm = new Views.QL_tbl01_frm();
-            panel1.Controls.Clear();
-            frm.TopLevel = false;
-            panel1.Controls.Add(frm);
-            frm.Show();
+            Utils.ShowFormInPanel(panel1, frm);
         }
 
         private void panel1_Resize(object sender, EventArgs e)
@@ -38,6 +36,12 @@ namespace FinalMVC
                 panel1.Controls[0].Width = panel1.Width;
                 panel1.Controls[0].Height = panel1.Height;
             }
+        }
+
+        private void formTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Views.QL_test_frm frm = new Views.QL_test_frm();
+            Utils.ShowFormInPanel(panel1, frm);
         }
     }
 }
