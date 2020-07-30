@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinalMVC.Controllers;
 
 namespace FinalMVC.Views
 {
     public partial class QL_tbl01_frm : Form
     {
+
+        Table01Controller controller = new Table01Controller();
         public QL_tbl01_frm()
         {
             InitializeComponent();
@@ -39,8 +42,23 @@ namespace FinalMVC.Views
 
         private void QL_tbl01_frm_Load(object sender, EventArgs e)
         {
+            // hien thi full on load
             this.Width = this.Parent.Width;
             this.Height = this.Parent.Height;
+
+
+            //load and fill data
+
+
+            dataGridView1.DataSource = controller.GetAll();
+
+
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
